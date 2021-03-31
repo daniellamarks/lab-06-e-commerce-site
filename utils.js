@@ -79,21 +79,22 @@ export function calcOrderTotal(denimStylesArray, cartArray) {
 }
 
 export function createTotalRow(denimStylesArray, cartArray) {
-
+    //get order total
     const result = calcOrderTotal(denimStylesArray, cartArray);
-
+    //create order total row and columns
     const tr = document.createElement('tr');
     const td1 = document.createElement('td');
     td1.classList.add('estimated-total');
     const td2 = document.createElement('td')
     const td3 = document.createElement('td');
     td3.classList.add('total-price');
+    tr.append(td1, td2, td3);
 
+    //put text into total row
     td1.textContent = 'Estimated Total';
     td2.textContent = ' ',
     td3.textContent = `$${result}.00`;
-
-    tr.append(td1, td2, td3);
+    
     return tr;
 }
 
@@ -105,18 +106,3 @@ export function createTotalRow(denimStylesArray, cartArray) {
 
 
 
-//     console.log(sum);
-
-//     const tr = document.createElement('tr');
-//     const td1 = document.createElement('td');
-//     td1.classList.add('estimated-total');
-//     const td2 = document.createElement('td');
-//     const td3 = document.createElement('td');
-//     td3.classList.add('total-price');
-
-//     td1.textContent = `Estimated Total`;
-//     td3.textContent = `$${sum}.00`;
-
-//     tr.append(td1, td2, td3);
-//     return tr;
-// }

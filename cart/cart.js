@@ -11,17 +11,12 @@ for (let cartItem of cart) {
     const tr = createTableRow(cartItem, productMatch);
     
     table.append(tr);
-};
+}
 
 const totalRow = createTotalRow(denimStyles, cart);
 
 table.append(totalRow);
-// calcOrderTotal(denimStyles, cart);
 
-
-// const totalRow = createTotalRow(cart, denimStyles);
-
-// table.append(totalRow);
 
 
 
