@@ -2,7 +2,7 @@ export const denimStyles = [
     {
         id: 'cheekyJean',
         name: 'The Curvy 90s Cheeky Jean',
-        image: '../assets/authenticstretchview1.jpeg',
+        image: '../assets/cheekyjeanview2.jpeg',
         description: 'Vintage Sunbeached Blue', 
         category: '4 washes available',
         price: 78

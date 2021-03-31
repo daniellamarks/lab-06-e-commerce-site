@@ -8,30 +8,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="styles/main.css"> -->
     <link rel="stylesheet" href="../styles/products.css">
-    <title>Document</title>
+    <title>Everlane Jeans</title>
 </head>
 
 <body>
     <header>
-        <nav>
-           <a href="./products">Women</a>
-           <a href="./products">Men</a>
-           <a href="./products">Denim</a>
-           <a href="./products">About</a> 
-        </nav>
-        <a href="/"><h1>Everlane</h1></a>
+        <div class="announcement bar">
+            <span>Sign up for 10% off your next order. <a href="./products">Shop now.</a></span>
+        </div>
+        <div class="nav-bar">
+            <nav>
+                <a href="./products">Women</a>
+                <a href="./products">Men</a>
+                <a href="./products">Denim</a>
+                <a href="./products">About</a> 
+            </nav>
+            <a href="/"><h1>Everlane</h1></a>
+            <div class="left-nav">
+                <span>Search</span>
+                <span>Log In</span>
+                <span>Sign Up</span>
+            </div>
+        </div>
+        <div class="breadcrumbs">
+            <a href="/">Home</a>
+            <span>/ Women</span> 
+        </div>
+        
     </header>
     <main>
+        <button class="filter">Filters > </button>
         <h2>Denim</h2>
         <ul class="denims-list">
-            <!-- <li class="denim">
-                <img src='../assets/cheekyjeanview1.webp'>
-                <p class="name">The Curvy 90s Cheeky Jean</p>
-                <p class="description">Vintage Sunbleached Blue</p>
-                <p class="category">4 washes available</p>
-                <p class="price">78</p>
-                <button id="cheekyJean">Add to cart</button>
-            </li> -->
+         
         </ul>
     </main>
     <script type="module" src="./products.js"></script>
