@@ -72,11 +72,34 @@ export function calcOrderTotal(denimStylesArray, cartArray) {
         console.log(lineItemTotal);
 
         sum += lineItemTotal;
-        console.log(sum)
+        console.log(sum);
     }
 
     return sum;
 }
+
+export function createTotalRow(denimStylesArray, cartArray) {
+
+    const result = calcOrderTotal(denimStylesArray, cartArray);
+
+    const tr = document.createElement('tr');
+    const td1 = document.createElement('td');
+    td1.classList.add('estimated-total');
+    const td2 = document.createElement('td')
+    const td3 = document.createElement('td');
+    td3.classList.add('total-price');
+
+    td1.textContent = 'Estimated Total';
+    td2.textContent = ' ',
+    td3.textContent = `$${result}.00`;
+
+    tr.append(td1, td2, td3);
+    return tr;
+}
+
+
+
+
 
 
 

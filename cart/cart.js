@@ -1,6 +1,6 @@
 import { denimStyles } from '../denimStyles.js';
 import { cart } from './cart-data.js';
-import { createTableRow, findById, calcOrderTotal } from '../utils.js';
+import { createTableRow, findById, createTotalRow } from '../utils.js';
 
 
 const table = document.querySelector('.item-table');
@@ -13,8 +13,15 @@ for (let cartItem of cart) {
     table.append(tr);
 };
 
+const totalRow = createTotalRow(denimStyles, cart);
+
+table.append(totalRow);
+// calcOrderTotal(denimStyles, cart);
 
 
+// const totalRow = createTotalRow(cart, denimStyles);
+
+// table.append(totalRow);
 
 
 
