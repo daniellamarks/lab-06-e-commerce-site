@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    color: gray;
+    
+}
+
+.content-wrap {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: stretch;
+    flex-direction: column;
+}
+
+.announcement-bar {
+    background: black;
+    color: white;
+    font-size: .8rem;
+    font-weight: 400;
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+
+.announcement-bar a {
+    color: white;
+    text-decoration: underline;
+}
+
+.nav-bar {
+    font-size: .8rem;  
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    /* position: fixed; */
+    /* top: 0; */
+}
+
+.nav-bar nav {
+    display: flex;
+}
+
+nav a {
+    margin: .5rem;
+    color: gray;
+}
+
+a:visited {
+    color: gray;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    letter-spacing: 0rem;
+    font-size: .7rem;
+}
+
+.right-nav {
+    margin: .5rem;
+}
+
+.right-nav span {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.breadcrumbs {
+    border-top: .5px solid lightgrey;
+    border-bottom: .5px solid lightgrey;
+    padding: .75rem;
+    font-size: .9rem;
+}
+
+.list {
+    line-height: 1.5rem;
+    font-weight: 300;
+    font-size: .75rem;
+    padding: 1rem;
+    overflow: scroll;
+    padding-right: 2rem;
+}
+
+.list-wrap {
+}
+
+hr {
+    border: none;
+    border-bottom: .01px solid rgb(228, 225, 225);
+    width: 50%;
+    padding: .25rem;
+    margin-bottom: .75rem;
+}
+
+.filter {
+    background-color: rgb(71, 71, 71);
+    color: white;
+    font-family: 'Work Sans';
+    border-radius: 25px;
+    padding: .5rem 1.25rem;
+    border: none;
+    margin-bottom: 2rem;    
+}
+
+main {
+    /* display: flex; */
+    padding-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.product-wrap {
+    padding: 2rem;
+}
+
+.product-wrap h2 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color:rgb(71, 71, 71)
+}
+
+.denims-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* border: red solid; */
+    align-items: space-between;
+    justify-content: flex-start;
+    /* height: 100%; */
+}
+
+.denim {
+    /* border: black solid 1px; */
+    width: 32%;
+    margin: 1%;
+    margin-left: 0;
+}
+
+.denim p {
+    padding: .25rem;
+}
+.name, .price {
+    color:rgb(71, 71, 71);
+    font-weight: 400;
+    font-size: .8rem;
+}
+
+.description, .category {
+    color:rgb(128, 126, 126);
+    font-size: .75rem;
+}
+
+.category {
+    font-style: italic;
+}
+
+.price {
+
+}
+
+.denim button {
+    width: 100%;
+    border: rgb(196, 193, 193) .5px solid;
+    padding: .2rem;
+    text-transform: uppercase;
+    color: rgb(71, 71, 71);
+    background-color: white;
+    font-family: 'Work Sans';
+}
+
+.denim button:hover {
+    background-color: rgb(182, 180, 180);
+    color: white;
+}
+img {
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
