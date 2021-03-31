@@ -1,22 +1,32 @@
-.cart-main {
-    display: flex;
-}
 
 * {
     /* border: 1px black solid; */
 }
 
-.logo:visited {
+.cart-main {
+    /* width: 100%;  */
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.item-table {
+    /* width: 70%; */
+   text-align: left;
+}
+
+.logo:active {
     color: gray;
 }
 
 table {
     border: solid 1px black;
     width: 100%;
+    padding: 1rem;
 }
 
 td {
-    border: dotted 1px black;
+    /* border: dotted 1px black; */
 }
 
 thead {
@@ -28,3 +38,19 @@ thead {
     font-weight: 900;
 }
 
+.checkout {
+    width: 20%;
+    margin: 2rem;
+    padding: 1rem;
+    font-size: 1rem;
+    color: lightgrey;
+    background-color: rgb(3, 75, 3);
+    border: none;
+    border-radius: 5px;
+
+}
+
+.button-wrap {
+    display: flex;
+    justify-content: center;
+}

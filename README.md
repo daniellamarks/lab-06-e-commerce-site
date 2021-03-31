@@ -59,3 +59,23 @@ Products Object Literals and Array of all Products	2
 DOM Render Function	3
 Correctly orchestrate product generation in products.js using a for loop and your render function	2
 TDD the DOM render function
+
+-----
+
+Shopping Cart
+1, Write, test, and use a function that takes a shopping cart item and returns a tr for a table
+
+export function findById(array, id) {
+    for (let item of array) {
+        if(item.id === id) {
+            return item
+        }
+    }
+
+export function findById(denimStyle, cartID) {
+    for (let item of array) {
+        if(denimStyle.id === cart.id) {
+            return item
+        }
+    }
+

@@ -123,7 +123,7 @@ hr {
     margin-bottom: 2rem;    
 }
 
-main {
+.products-main {
     /* display: flex; */
     padding-top: 1.5rem;
     display: grid;
