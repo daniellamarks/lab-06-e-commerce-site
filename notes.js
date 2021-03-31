@@ -24,3 +24,20 @@ for (let cartItem of cart) {
 const totalRow = createTotalRow(cart, denimStyles);
 
 table.append(totalRow);
+
+
+
+export function createTotalRow(cartArray, denimStylesArray) {
+    // 
+    let sum = 0;
+
+    for (let cartItem of cartArray) {    
+
+        const matchingDenimStyle = findById(denimStylesArray, cartItem.id);
+
+        const lineItem = matchingDenimStyle.price * cartItem.quantity;
+
+        console.log(lineItem);
+
+        sum += lineItem;
+    }

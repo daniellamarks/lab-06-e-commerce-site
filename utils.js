@@ -1,4 +1,3 @@
-
 export function findById(someArray, someID) {
     for (let item of someArray) {
         if (item.id === someID) 
@@ -54,42 +53,47 @@ export function createTableRow(someCartItem, someDenimStyle) {
     tdName.textContent = someDenimStyle.name;
     tdQuantity.textContent = someCartItem.quantity;
 
-    // consttotalAsUSD = total.toLocaleString('en-us', config);
-
-    tdPrice.textContent = `$${someDenimStyle.price * someCartItem.quantity}.00`;
+    // tdPrice.textContent = `$${someDenimStyle.price * someCartItem.quantity}.00`;
+    tdPrice.textContent = `$${calcItemTotal(someDenimStyle.price, someCartItem.quantity)}.00`;
 
     tr.append(tdName, tdQuantity, tdPrice);
     return tr;
-
 }
 
-export function createTotalRow(cartArray, denimStylesArray) {
-    // 
+export function calcOrderTotal(denimStylesArray, cartArray) {
     let sum = 0;
 
-    for (let cartItem of cartArray) {    
+    for (let cartItem of cartArray) {
 
-        const matchingDenimStyle = findById(denimStylesArray, cartItem.id);
+        const matchingProduct = findById(denimStylesArray, cartItem.id);
+        console.log(matchingProduct);
 
-        const lineItem = matchingDenimStyle.price * cartItem.quantity;
+        const lineItemTotal = calcItemTotal(matchingProduct.price, cartItem.quantity);
+        console.log(lineItemTotal);
 
-        console.log(lineItem);
-
-        sum += lineItem;
+        sum += lineItemTotal;
+        console.log(sum)
     }
 
-    console.log(sum);
-
-    const tr = document.createElement('tr');
-    const td1 = document.createElement('td');
-    td1.classList.add('estimated-total');
-    const td2 = document.createElement('td');
-    const td3 = document.createElement('td');
-    td3.classList.add('total-price');
-
-    td1.textContent = `Estimated Total`;
-    td3.textContent = `$${sum}.00`;
-
-    tr.append(td1, td2, td3);
-    return tr;
+    return sum;
 }
+
+
+
+
+
+//     console.log(sum);
+
+//     const tr = document.createElement('tr');
+//     const td1 = document.createElement('td');
+//     td1.classList.add('estimated-total');
+//     const td2 = document.createElement('td');
+//     const td3 = document.createElement('td');
+//     td3.classList.add('total-price');
+
+//     td1.textContent = `Estimated Total`;
+//     td3.textContent = `$${sum}.00`;
+
+//     tr.append(td1, td2, td3);
+//     return tr;
+// }
