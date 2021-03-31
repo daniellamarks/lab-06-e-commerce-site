@@ -11,12 +11,12 @@ test('it should take a denimstyles element and return an li', (expect) => {
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = createDenimStyleLi({
-    id: 'cheekyJean',
-    name: 'The Curvy 90s Cheeky Jean',
-    image: '../assets/cheekyjeanview2.jpeg',
-    description: 'Vintage Sunbeached Blue', 
-    category: '4 washes available',
-    price: 78
+        id: 'cheekyJean',
+        name: 'The Curvy 90s Cheeky Jean',
+        image: '../assets/cheekyjeanview2.jpeg',
+        description: 'Vintage Sunbeached Blue', 
+        category: '4 washes available',
+        price: 78
     });
 
     //Expect
