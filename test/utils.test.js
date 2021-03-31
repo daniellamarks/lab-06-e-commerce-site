@@ -6,7 +6,7 @@ const test = QUnit.test;
 test('it should take a denimstyles element and return an li', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<li class="denim"><img src="../assets/cheekyjeanview2.jpeg"><p class="name">The Curvy 90s Cheeky Jean</p><p class="description">Vintage Sunbeached Blue</p><p class="category">4 washes available</p><p class="price">$78</p><button id="cheekyJean">Add to cart</button></li>`;
+    const expected = `<li class="denim"><img src="../assets/cheekyjeanview2.jpeg"><p class="name">The Curvy 90s Cheeky Jean</p><p class="description">Vintage Sunbeached Blue</p><p class="category">4 washes available</p><p class="price">$78</p><button id="cheekyJean">Add to bag</button></li>`;
     
     //Act 
     // Call the function you're testing and set the result to a const

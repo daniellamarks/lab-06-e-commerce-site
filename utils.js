@@ -25,8 +25,8 @@ export function createDenimStyleLi(denim) {
     pPrice.textContent = `$${denim.price}`;
     
     const button = document.createElement('button');
-    button.id = 'cheekyJean';
-    button.textContent = 'Add to cart';
+    button.id = denim.id;
+    button.textContent = 'Add to bag';
 
     li.append(image, pName, pDescription, pCategory, pPrice, button);
 
