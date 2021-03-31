@@ -40,6 +40,11 @@ export function createDenimStyleLi(denim) {
 
 }
 
+export function calcItemTotal(price, quantity) {
+    const itemTotal = price * quantity;
+    return itemTotal;
+}
+
 export function createTableRow(someCartItem, someDenimStyle) {
     const tr = document.createElement('tr');
     const tdName = document.createElement('td');
