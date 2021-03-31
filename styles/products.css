@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap');
+
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+img {
+    max-width: 62vw;
+    min-width: 20vw;
+    width: 25vw;
+}
+
+li {
+    list-style: none;
+}
+
+.name, .price {
+    color: black;
+    font-weight: 900;
+}
+
+.description, .category {
+    color: rgb(92, 91, 91); 
+}

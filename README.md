@@ -31,13 +31,13 @@
     4. Create a variable that is an array of all your products 
         (const = denimStyles)
     5. export this array to utils.js, create a DOM GENERATION FUNCTION 
-        createClothingPieceLi()
+        createDenimStyleLi()
 
 6. Generate Product List in products/products.js
     1. import your data (denimStyles.js)
     2. your DOM generation function from utils.js
     3. 'locate the list element where your products will go' = 
-            const ul = document.querySelector(.clothing-list');
+            const li = document.querySelector(.clothing-list');
     4. "loop through your data"
             i. "create a variable that is the singular of your domain list and assign based on the current array of index"
                 for(let denimStyle of denimStyles) {
