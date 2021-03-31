@@ -39,6 +39,10 @@ header {
     text-decoration: underline;
 }
 
+.announcement-bar a:visited {
+    color: white;
+}
+
 .nav-bar {
     font-size: .8rem;  
     display: flex;
@@ -62,6 +66,7 @@ nav a {
 a:visited {
     color: gray;
 }
+
 
 a {
     text-decoration: none;
