@@ -58,29 +58,32 @@ export function createTableRow(someCartItem, someDenimStyle) {
 
 }
 
-function createTotalRow(cartArray, denimStylesArray) {
+export function createTotalRow(cartArray, denimStylesArray) {
     // 
-    for (let cartItem of cartArray) {
-        let sum = 0;
+    let sum = 0;
 
-        const matchingDenimStyle = findById
-        (denimStyles(digimonArray), cartItem.id);
+    for (let cartItem of cartArray) {    
+
+        const matchingDenimStyle = findById(denimStylesArray, cartItem.id);
 
         const lineItem = matchingDenimStyle.price * cartItem.quantity;
 
         console.log(lineItem);
 
-        sum = sum + lineItem;
+        sum += lineItem;
     }
 
     console.log(sum);
-    const tr = document.createElement('tr');
 
+    const tr = document.createElement('tr');
     const td1 = document.createElement('td');
+    td1.classList.add('estimated-total');
     const td2 = document.createElement('td');
     const td3 = document.createElement('td');
+    td3.classList.add('total-price');
 
-    td3.textContent = sum;
+    td1.textContent = `Estimated Total`;
+    td3.textContent = `$${sum}.00`;
 
     tr.append(td1, td2, td3);
     return tr;
