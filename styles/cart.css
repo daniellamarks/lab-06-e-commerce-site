@@ -1,0 +1,25 @@
+.cart-main {
+    display: flex;
+}
+
+* {
+    /* border: 1px black solid; */
+}
+
+.logo:visited {
+    color: gray;
+}
+
+table {
+    border: solid 1px black;
+    width: 100%;
+}
+
+td {
+    border: dotted 1px black;
+}
+
+thead {
+    font-weight: 900;
+    font-size: 1.3rem;
+}
