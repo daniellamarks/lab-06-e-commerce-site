@@ -7,7 +7,8 @@ const test = QUnit.test;
 test('it sould take a cart line item and a denimstyle and return a table row', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = "<tr><td>The Curvy 90s Cheeky Jean</td><td>2</td><td>$156.00</td></tr>"
+    const expected = `<tr class="tr"><td class="td">The Curvy 90s Cheeky Jean</td><td class="td">2</td><td class="td">$156.00</td></tr>`
+
     
     //Act 
     // Call the function you're testing and set the result to a const

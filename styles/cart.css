@@ -1,8 +1,4 @@
 
-* {
-    /* border: 1px black solid; */
-}
-
 .cart-main {
     /* width: 100%;  */
     margin: 2rem;
@@ -20,13 +16,15 @@
 }
 
 table {
-    border: solid 1px black;
+    /* border: solid 1px black; */
     width: 100%;
     padding: 1rem;
+    background-color:#fafafa;
 }
 
-td {
-    /* border: dotted 1px black; */
+.td {
+    border-bottom: 1px solid lightgray;
+    padding: 1rem;
 }
 
 thead {
@@ -36,6 +34,7 @@ thead {
 
 .estimated-total, .total-price {
     font-weight: 900;
+    padding-top: 1rem;
 }
 
 .checkout {
@@ -47,10 +46,10 @@ thead {
     background-color: rgb(3, 75, 3);
     border: none;
     border-radius: 5px;
-
 }
 
 .button-wrap {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
+

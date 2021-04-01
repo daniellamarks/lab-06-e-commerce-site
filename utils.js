@@ -1,6 +1,6 @@
-export function findById(someArray, someID) {
-    for (let item of someArray) {
-        if (item.id === someID) 
+export function findById(array, iD) {
+    for (let item of array) {
+        if (item.id === iD) 
             return item;
     }
 }
@@ -46,10 +46,13 @@ export function calcItemTotal(price, quantity) {
 
 export function createTableRow(someCartItem, someDenimStyle) {
     const tr = document.createElement('tr');
+    tr.classList.add('tr');
     const tdName = document.createElement('td');
+    tdName.classList.add('td');
     const tdQuantity = document.createElement('td');
+    tdQuantity.classList.add('td');
     const tdPrice = document.createElement('td');
-
+    tdPrice.classList.add('td');
     tdName.textContent = someDenimStyle.name;
     tdQuantity.textContent = someCartItem.quantity;
 
