@@ -53,3 +53,6 @@ thead {
     justify-content: flex-end;
 }
 
+.gray {
+    background-color: rgb(240, 235, 235);
+}

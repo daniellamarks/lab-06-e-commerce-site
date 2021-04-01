@@ -8,8 +8,10 @@ const checkoutButton = document.getElementById('checkout-button');
 
 const cart = getCart();
 
-console.log(cart);
-
+if (cart.length < 1) {
+    checkoutButton.disabled = true;
+    checkoutButton.classList.add('gray')
+}
 
 for (let cartItem of cart) {
     const productMatchesID = findById(denimStyles, cartItem.id);

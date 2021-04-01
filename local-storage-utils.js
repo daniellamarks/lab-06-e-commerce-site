@@ -9,7 +9,6 @@ export function getCart() {
     //if there is something in cart then turn that string into an object array
     const arrayTurnedString = localStorage.getItem('ALLTHINGSINCART');
     const stringTurnedArray = JSON.parse(arrayTurnedString);
-    const checkoutButton = document.getElementById('checkout-button');
 
     if (stringTurnedArray) {
         return stringTurnedArray;
