@@ -1,3 +1,5 @@
+import { addItemToCart } from './local-storage-utils.js';
+
 export function findById(array, iD) {
     for (let item of array) {
         if (item.id === iD) 
@@ -28,12 +30,17 @@ export function createDenimStyleLi(denim) {
     const pPrice = document.createElement('p');
     pPrice.classList.add('price');
     pPrice.textContent = `$${denim.price}`;
+    // Add a quantity drop-down to the rendered product. When the "Add" button is clicked, add the indicated amount of product to the quantity.
+    const addButton = document.createElement('button');
+    // addButton.id = denim.id;
+    addButton.textContent = 'Add to bag';
     
-    const button = document.createElement('button');
-    button.id = denim.id;
-    button.textContent = 'Add to bag';
+    addButton.addEventListener('click', () => {
+        addItemToCart(denim.id);
+        // const q
+    });
 
-    li.append(image, pName, pDescription, pCategory, pPrice, button);
+    li.append(image, pName, pDescription, pCategory, pPrice, addButton);
 
     return li;
 
