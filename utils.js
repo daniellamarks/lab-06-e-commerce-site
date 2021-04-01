@@ -50,11 +50,11 @@ export function createTableRow(productArrayItem, cartArrayItem) {
     const tr = document.createElement('tr');
     tr.classList.add('tr');
     const tdName = document.createElement('td');
-    tdName.classList.add('td')
+    tdName.classList.add('td');
     const tdQuantity = document.createElement('td');
-    tdQuantity.classList.add('td')
+    tdQuantity.classList.add('td');
     const tdPrice = document.createElement('td');
-    tdPrice.classList.add('td')
+    tdPrice.classList.add('td');
 
     tdName.textContent = productArrayItem.name;
     tdQuantity.textContent = cartArrayItem.quantity;
@@ -86,7 +86,7 @@ export function createTotalRow(productArray, cartArray) {
     const tr = document.createElement('tr');
     const td1 = document.createElement('td');
     td1.classList.add('estimated-total');
-    const td2 = document.createElement('td')
+    const td2 = document.createElement('td');
     const td3 = document.createElement('td');
     td3.classList.add('total-price');
     tr.append(td1, td2, td3);
