@@ -44,47 +44,45 @@ export function calcItemTotal(price, quantity) {
     return itemTotal;
 }
 
-export function createTableRow(someCartItem, someDenimStyle) {
+
+export function createTableRow(productArrayItem, cartArrayItem) {
+
     const tr = document.createElement('tr');
     tr.classList.add('tr');
     const tdName = document.createElement('td');
-    tdName.classList.add('td');
+    tdName.classList.add('td')
     const tdQuantity = document.createElement('td');
-    tdQuantity.classList.add('td');
+    tdQuantity.classList.add('td')
     const tdPrice = document.createElement('td');
-    tdPrice.classList.add('td');
-    tdName.textContent = someDenimStyle.name;
-    tdQuantity.textContent = someCartItem.quantity;
+    tdPrice.classList.add('td')
 
-    // tdPrice.textContent = `$${someDenimStyle.price * someCartItem.quantity}.00`;
-    tdPrice.textContent = `$${calcItemTotal(someDenimStyle.price, someCartItem.quantity)}.00`;
+    tdName.textContent = productArrayItem.name;
+    tdQuantity.textContent = cartArrayItem.quantity;
+    tdPrice.textContent = `$${calcItemTotal(productArrayItem.price, cartArrayItem.quantity)}.00`;
 
     tr.append(tdName, tdQuantity, tdPrice);
     return tr;
+
 }
 
-export function calcOrderTotal(denimStylesArray, cartArray) {
-    let sum = 0;
+export function calcOrderTotal(productArray, cartArray) {
+    let orderTotal = 0;
 
     for (let cartItem of cartArray) {
-
-        const matchingProduct = findById(denimStylesArray, cartItem.id);
-        console.log(matchingProduct);
-
-        const lineItemTotal = calcItemTotal(matchingProduct.price, cartItem.quantity);
-        console.log(lineItemTotal);
-
-        sum += lineItemTotal;
-        console.log(sum);
+        const productMatchesId = findById(productArray, cartItem.id);
+        const lineItemTotal = calcItemTotal(productMatchesId.price, cartItem.quantity);
+        
+        orderTotal += lineItemTotal;
     }
 
-    return sum;
+    return orderTotal;
+
 }
 
-export function createTotalRow(denimStylesArray, cartArray) {
-    //get order total
-    const result = calcOrderTotal(denimStylesArray, cartArray);
-    //create order total row and columns
+export function createTotalRow(productArray, cartArray) {
+
+    const result = calcOrderTotal(productArray, cartArray);
+   
     const tr = document.createElement('tr');
     const td1 = document.createElement('td');
     td1.classList.add('estimated-total');
@@ -93,13 +91,14 @@ export function createTotalRow(denimStylesArray, cartArray) {
     td3.classList.add('total-price');
     tr.append(td1, td2, td3);
 
-    //put text into total row
     td1.textContent = 'Estimated Total';
     td2.textContent = ' ',
     td3.textContent = `$${result}.00`;
     
     return tr;
 }
+
+
 
 
 
