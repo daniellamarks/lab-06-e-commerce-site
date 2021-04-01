@@ -8,7 +8,7 @@ for (let cartItem of cart) {
     const productMatchesID = findById(denimStyles, cartItem.id);
     const trOfMatch = createTableRow(productMatchesID, cartItem);
     table.append(trOfMatch);
-};
+}
 
 const totalTr = createTotalRow(denimStyles, cart);
 
