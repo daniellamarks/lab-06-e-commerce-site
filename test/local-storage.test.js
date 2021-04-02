@@ -20,7 +20,7 @@ test('setCart should put our cart into localStorage', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     
-    const expected = stubCart
+    const expected = stubCart;
     
     setCart(expected);
 
