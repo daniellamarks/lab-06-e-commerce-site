@@ -1,3 +1,5 @@
+import { addItemToCart } from './local-storage-utils.js';
+
 export function findById(array, iD) {
     for (let item of array) {
         if (item.id === iD) 
@@ -28,12 +30,29 @@ export function createDenimStyleLi(denim) {
     const pPrice = document.createElement('p');
     pPrice.classList.add('price');
     pPrice.textContent = `$${denim.price}`;
+    const addButton = document.createElement('button');
+    addButton.id = denim.id;
+    addButton.textContent = 'Add to bag';
     
-    const button = document.createElement('button');
-    button.id = denim.id;
-    button.textContent = 'Add to bag';
+    const span = document.createElement('span');
+    span.textContent = 'Quantity: ';
+    
+    const select = document.createElement('select');
 
-    li.append(image, pName, pDescription, pCategory, pPrice, button);
+    for (let i = 0; i < 6; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+
+        select.append(option);
+    }
+  
+    addButton.addEventListener('click', () => {
+        addItemToCart(denim.id, select.value);
+
+    });
+
+    li.append(image, pName, pDescription, pCategory, pPrice, span, select, addButton);
 
     return li;
 

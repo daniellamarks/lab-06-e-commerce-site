@@ -187,6 +187,11 @@ hr {
     color: rgb(71, 71, 71);
     background-color: white;
     font-family: 'Work Sans';
+    margin-top: .5rem;
+}
+
+span {
+    font-size: .8rem;
 }
 
 .denim button:hover {
