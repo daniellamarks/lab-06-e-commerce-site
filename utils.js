@@ -30,17 +30,29 @@ export function createDenimStyleLi(denim) {
     const pPrice = document.createElement('p');
     pPrice.classList.add('price');
     pPrice.textContent = `$${denim.price}`;
-    // Add a quantity drop-down to the rendered product. When the "Add" button is clicked, add the indicated amount of product to the quantity.
     const addButton = document.createElement('button');
-    // addButton.id = denim.id;
+    addButton.id = denim.id;
     addButton.textContent = 'Add to bag';
     
+    const span = document.createElement('span');
+    span.textContent = 'Quantity: ';
+    
+    const select = document.createElement('select');
+
+    for (let i = 0; i < 6; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+
+        select.append(option);
+    }
+  
     addButton.addEventListener('click', () => {
-        addItemToCart(denim.id);
-        // const q
+        addItemToCart(denim.id, select.value);
+
     });
 
-    li.append(image, pName, pDescription, pCategory, pPrice, addButton);
+    li.append(image, pName, pDescription, pCategory, pPrice, span, select, addButton);
 
     return li;
 

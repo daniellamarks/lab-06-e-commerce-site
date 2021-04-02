@@ -10,7 +10,7 @@ const cart = getCart();
 
 if (cart.length < 1) {
     checkoutButton.disabled = true;
-    checkoutButton.classList.add('gray')
+    checkoutButton.classList.add('gray');
 }
 
 for (let cartItem of cart) {
@@ -31,6 +31,7 @@ checkoutButton.addEventListener('click', () => {
 
     window.location = '../index.html';
 });
+
 
 
 
