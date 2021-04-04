@@ -43,10 +43,11 @@ thead {
     margin: 2rem;
     padding: 1rem;
     font-size: 1rem;
-    color: lightgrey;
+    color: white;
     background-color: rgb(3, 75, 3);
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .button-wrap {

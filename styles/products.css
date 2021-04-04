@@ -188,7 +188,9 @@ hr {
     background-color: white;
     font-family: 'Work Sans';
     margin-top: .5rem;
+    cursor: pointer;
 }
+
 
 span {
     font-size: .8rem;
@@ -198,6 +200,13 @@ span {
     background-color: rgb(182, 180, 180);
     color: white;
 }
+
+.denim button:focus {
+    outline: 0;
+    background-color: rgb(3, 75, 3);
+    color: white;
+}
+
 img {
     width: 100%;
 }

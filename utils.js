@@ -49,6 +49,7 @@ export function createDenimStyleLi(denim) {
   
     addButton.addEventListener('click', () => {
         addItemToCart(denim.id, select.value);
+        addButton.textContent = `Added to bag`;
 
     });
 
