@@ -46,4 +46,3 @@ export const denimStyles = [
     }, 
 ];
 
-//available in ankle boolean

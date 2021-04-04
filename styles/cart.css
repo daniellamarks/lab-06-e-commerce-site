@@ -25,6 +25,7 @@ table {
 .td {
     border-bottom: 1px solid lightgray;
     padding: 1rem;
+    padding-left: 0;
 }
 
 thead {
