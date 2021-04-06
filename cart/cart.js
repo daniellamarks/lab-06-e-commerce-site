@@ -1,10 +1,11 @@
 // import { cart } from './cart-data.js';
 import { denimStyles } from '../denimStyles.js';
 import { getCart } from '../local-storage-utils.js';
-import { createTableRow, findById, createTotalRow } from '../utils.js';
+import { createTableRow, findById, createTotalRow, clearCart } from '../utils.js';
 
 const table = document.querySelector('.item-table');
 const checkoutButton = document.getElementById('checkout-button');
+const clearButton = document.querySelector('.empty-bag');
 
 const cart = getCart();
 
@@ -17,6 +18,7 @@ for (let cartItem of cart) {
     const productMatchesID = findById(denimStyles, cartItem.id);
     const trOfMatch = createTableRow(productMatchesID, cartItem);
     table.append(trOfMatch);
+
 }
 
 const totalTr = createTotalRow(denimStyles, cart);
@@ -31,6 +33,13 @@ checkoutButton.addEventListener('click', () => {
 
     window.location = '../index.html';
 });
+
+clearButton.addEventListener('click', () => {
+    clearCart();
+    window.location = './cart.html';
+});
+
+
 
 
 

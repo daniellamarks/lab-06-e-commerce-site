@@ -41,6 +41,7 @@ thead {
 .checkout {
     width: 20%;
     margin: 2rem;
+    margin-top: 1rem;;
     padding: 1rem;
     font-size: 1rem;
     color: white;
@@ -57,4 +58,20 @@ thead {
 
 .gray {
     background-color: rgb(240, 235, 235);
+}
+
+.delete-button {
+
+}
+
+.empty-bag {
+    width: 20%;
+    margin: 1rem 2rem;
+    padding: .5rem;
+    font-size: 1rem;
+    color: rgb(165, 163, 163);
+    background-color:white;
+    border: lightgray solid .5px;
+    border-radius: 5px;
+    cursor: pointer;
 }

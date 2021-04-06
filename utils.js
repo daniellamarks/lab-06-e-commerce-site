@@ -76,11 +76,20 @@ export function createTableRow(productArrayItem, cartArrayItem) {
     const tdPrice = document.createElement('td');
     tdPrice.classList.add('td');
 
+    // const deleteButton = document.createElement('button');
+    // deleteButton.classList.add('delete-button');
+    // deleteButton.textContent = 'Delete';
+
     tdName.textContent = productArrayItem.name;
     tdQuantity.textContent = cartArrayItem.quantity;
     tdPrice.textContent = `$${calcItemTotal(productArrayItem.price, cartArrayItem.quantity)}.00`;
 
     tr.append(tdName, tdQuantity, tdPrice);
+
+    // deleteButton.addEventListener('click', () => {
+    //     tr.remove(tdName, tdQuantity, tdPrice, deleteButton);
+    // });
+
     return tr;
 
 }
@@ -118,6 +127,10 @@ export function createTotalRow(productArray, cartArray) {
     return tr;
 }
 
+export function clearCart() {
+    const emptyCart = localStorage.clear() ;
+    return emptyCart;
+}
 
 
 
