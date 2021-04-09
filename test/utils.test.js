@@ -7,7 +7,7 @@ const test = QUnit.test;
 
 test('it should take a denimstyles element and return an li', (expect) => {
 
-    const expected = `<li class="denim"><img src="../assets/cheekyjeanview2.jpeg"><p class="name">The Curvy 90s Cheeky Jean</p><p class="description">Vintage Sunbeached Blue</p><p class="category">4 washes available</p><p class="price">$78</p><button>Add to bag</button></li>`;
+    const expected = `<li class="denim"><img src="../assets/cheekyjeanview2.jpeg"><p class="name">The Curvy 90s Cheeky Jean</p><p class="description">Vintage Sunbeached Blue</p><p class="category">4 washes available</p><p class="price">$78</p><span>Quantity: </span><select><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option…`;
 
     const actual = createDenimStyleLi({
         id: 'cheekyJean',
@@ -16,6 +16,7 @@ test('it should take a denimstyles element and return an li', (expect) => {
         description: 'Vintage Sunbeached Blue', 
         category: '4 washes available',
         price: 78
+        
     });
 
     expect.equal(actual.outerHTML, expected);

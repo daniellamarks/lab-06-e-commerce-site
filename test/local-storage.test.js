@@ -45,23 +45,24 @@ test('getCart should get our cart(all items) from local storage', (expect) => {
 
 test('addItemToCart should add an item to (cart)local storage', (expect) => {
 
+   
+    const arrayTurnedString = JSON.stringify(stubCart);
+    localStorage.setItem('ALLTHINGSINCART', arrayTurnedString);
+
+    addItemToCart(4, 2);
+
+    const actual = JSON.parse(localStorage.getItem('ALLTHINGSINCART'));
+
     const expected = [
         {
             id: 4,
-            quantity: 6,
+            quantity: 1,
         },
         {
             id: 3,
             quantity: 2
         }
     ];
-    
-    const arrayTurnedString = JSON.stringify(stubCart);
-    localStorage.setItem('ALLTHINGSINCART', arrayTurnedString);
 
-    addItemToCart(4);
-
-    const actual = JSON.parse(localStorage.getItem('ALLTHINGSINCART'));
-
-    expect.deepEqual(expected, actual);
+    expect.deepEqual(actual, expected);
 });
